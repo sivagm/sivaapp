@@ -1,0 +1,22 @@
+<h1>Listing apps</h1>
+ 
+<table>
+  <tr>
+    <th>id</th>
+    <th>Title</th>
+    <th>Description</th>
+  </tr>
+ <%= @app.inspect %>
+ <br/>
+  <% @app.each do |app| %>
+    <tr>
+      <td><%=app.id%> </td>
+      <td><%= app.title %></td>
+      <td><%= app.description %> </td>
+      <td><%= link_to 'Show', app_path(app) %></td>
+    </tr>
+  <% end %>
+</table>
+
+<%= link_to 'New App', new_app_path %>
+<%= link_to 'go to all post', :controller => 'posts',:action => :index %>

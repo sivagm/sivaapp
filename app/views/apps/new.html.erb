@@ -1,11 +1,15 @@
 <h1> New App </h1>
-<%= form_for :article do |f|%>
+<%= form_for :app, url: apps_path do |f|%>
 	<p> 
 	  <%= f.label :title %><br>
 	  <%= f.text_field :title %>
 	  </p>
 	  <p>
-	  <%= f.label :Description %><br>
-	  <%= f.text_area :Description %>
+	  <%= f.label :description %><br>
+	  <%= f.text_area :description %>
 	  </p>
+      <p>
+      	<%= f.submit %>
+      </p>
+	  
 <%end%>
